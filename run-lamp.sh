@@ -3,7 +3,7 @@
 function exportBoolean {
     if [ "${!1}" = "**Boolean**" ]; then
             export ${1}=''
-    else 
+    else
             export ${1}='Yes.'
     fi
 }
@@ -31,13 +31,13 @@ fi
 # stdout server info:
 if [ ! $LOG_STDOUT ]; then
 cat << EOB
-    
-    **********************************************
-    *                                            *
-    *    Docker image: fauria/lamp               *
-    *    https://github.com/fauria/docker-lamp   *
-    *                                            *
-    **********************************************
+
+    *****************************************************
+    *                                                    *
+    *    Docker image: damilolasodiq/lamp                *
+    *    https://github.com/damilolasodiq/docker-lamp    *
+    *                                                    *
+    *****************************************************
 
     SERVER SETTINGS
     ---------------
@@ -60,6 +60,7 @@ fi
 
 # Run MariaDB
 /usr/bin/mysqld_safe --timezone=${DATE_TIMEZONE}&
+/usr/bin/mysql < init.sql& #run initialization scripts for mysql db
 
 # Run Apache:
 if [ $LOG_LEVEL == 'debug' ]; then
