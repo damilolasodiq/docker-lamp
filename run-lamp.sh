@@ -33,10 +33,10 @@ if [ ! $LOG_STDOUT ]; then
 cat << EOB
 
     *****************************************************
-    *                                                   *
-    *    Docker image: damilolasodiq/lamp               *
-    *    https://github.com/damilolasodiq/docker-lamp   *
-    *                                                   *
+    *                                                    *
+    *    Docker image: damilolasodiq/lamp                *
+    *    https://github.com/damilolasodiq/docker-lamp    *
+    *                                                    *
     *****************************************************
 
     SERVER SETTINGS
